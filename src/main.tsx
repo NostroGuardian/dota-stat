@@ -1,13 +1,13 @@
-import { Provider as ChakraProvider } from '@/components/ui/provider';
+import { Provider as ChakraProvider } from '@/app/chakraSnippets/provider';
+import { router } from '@/app/routing/router';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-
-import { App } from './App';
+import { RouterProvider } from 'react-router-dom';
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
 		<ChakraProvider>
-			<App />
+			<RouterProvider router={router} />
 		</ChakraProvider>
 	</StrictMode>
 );
